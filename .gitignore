@@ -6,6 +6,9 @@ node_modules/
 /blob-report/
 /playwright/.cache/
 
+# BDD Generated generated features
+**/.features-gen/**/*.spec.js
+
 
 # Created by https://www.gitignore.io/api/node
 # Edit at https://www.gitignore.io/?templates=node
