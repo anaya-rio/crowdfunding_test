@@ -5,6 +5,8 @@ node_modules/
 /playwright-report/
 /blob-report/
 /playwright/.cache/
+/playwright/.auth
+.auth/
 
 # BDD Generated generated features
 **/.features-gen/**/*.spec.js

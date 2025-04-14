@@ -1,4 +1,4 @@
-import { defineConfig, devices } from '@playwright/test';
+import { chromium, defineConfig, devices } from '@playwright/test';
 import { defineBddConfig } from 'playwright-bdd';
 
 
@@ -45,6 +45,17 @@ export default defineConfig({
   /* Configure projects for major browsers */
   projects: [
     {
+      name: 'setup',
+      testMatch: /.*\setup\.ts/,
+    },
+
+    {
+      name: 'ui',
+      testDir: './tests/ui',
+      dependencies: ['setup'],
+    },
+
+    {
       name: 'chromium',
       use: { ...devices['Desktop Chrome'] },
     },
@@ -58,7 +69,7 @@ export default defineConfig({
       name: 'webkit',
       use: { ...devices['Desktop Safari'] },
     },
-
+  
     /* Test against mobile viewports. */
     // {
     //   name: 'Mobile Chrome',

@@ -15,3 +15,9 @@ When('I click link {string}', async ({ page }, name) => {
 Then('I see in title {string}', async ({ page }, keyword) => {
   await expect(page).toHaveTitle(new RegExp(keyword));
 });
+
+// const { Given, When, Then } = createBdd({ basePath: 'src' });
+
+// Given ('I am logged in', async ({ page }) => {
+
+// }
