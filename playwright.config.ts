@@ -57,17 +57,28 @@ export default defineConfig({
 
     {
       name: 'chromium',
-      use: { ...devices['Desktop Chrome'] },
+      use: {
+        ...devices['Desktop Chrome'],
+        storageState: '.auth/guestuser.json',
+      },
+      dependencies: ['setup'],
     },
 
     {
       name: 'firefox',
-      use: { ...devices['Desktop Firefox'] },
+      use: { 
+        ...devices['Desktop Firefox'],
+        storageState: '.auth/guestuser.json',
+      },
+      dependencies: ['setup'],
     },
 
     {
       name: 'webkit',
-      use: { ...devices['Desktop Safari'] },
+      use: { ...devices['Desktop Safari'],
+        storageState: '.auth/guestuser.json',
+       },
+       dependencies: ['setup'],
     },
   
     /* Test against mobile viewports. */

@@ -4,20 +4,18 @@ import { createBdd } from 'playwright-bdd';
 
 const { Given, When, Then } = createBdd();
 
-Given('I am on home page', async ({ page }) => {
-  await page.goto('https://playwright.dev');
+Given('I am logged in', async ({ page }) => {
+  pending;
 });
 
-When('I click link {string}', async ({ page }, name) => {
-  await page.getByRole('link', { name }).click();
+When('I select "Create a new project"', async ({ page }, name) => {
+  pending;
 });
 
-Then('I see in title {string}', async ({ page }, keyword) => {
-  await expect(page).toHaveTitle(new RegExp(keyword));
+Then('the project is created', async ({ page }, keyword) => {
+  pending;
 });
 
-// const { Given, When, Then } = createBdd({ basePath: 'src' });
-
-// Given ('I am logged in', async ({ page }) => {
-
-// }
+Then('I see an option to Edit and Delete the project', () => {
+  pending;
+})

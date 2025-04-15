@@ -1,0 +1,14 @@
+{
+  "cookies": [],
+  "origins": [
+    {
+      "origin": "https://harveztcirkle.netlify.app",
+      "localStorage": [
+        {
+          "name": "token",
+          "value": "e84e53beb0d0016410091732fc109fdff3eeb7d2"
+        }
+      ]
+    }
+  ]
+}
